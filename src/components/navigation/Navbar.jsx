@@ -26,6 +26,7 @@ const Navbar = () => {
             <Link
               key={to}
               to={to}
+              onClick={() => window.scrollTo({top:0, behavior:"smooth"})}
               className="text-[13px] font-medium text-navy transition-colors hover:text-gold-600"
             >
               {label}
@@ -59,7 +60,7 @@ const Navbar = () => {
               <li key={to} className="border-b border-gray-100 last:border-b-0">
                 <Link
                   to={to}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {setOpen(false) ; window.scrollTo({top:0, behavior:"smooth"}) }}
                   className="flex min-h-11 items-center rounded-sm px-3 py-3 text-sm font-medium text-navy transition-colors hover:bg-gray-50 hover:text-gold-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                 >
                   {label}
